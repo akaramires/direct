@@ -1,0 +1,38 @@
+@import "variables";
+@import "common";
+
+div {
+    &.wrap {
+        border-left: 2px solid #9400D3;
+        max-width: 1200px;
+        margin: 50px auto;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+label {
+    float: left;
+    border-right: 2px solid #9400D3;
+}
+
+@media (max-width: 599px) {
+    label {
+        width: (100%-2px)/2
+    }
+}
+
+@media (max-width: 1049px) and (min-width: 600px) {
+    label {
+        width: (100%-2px)/3;
+    }
+}
+
+@media (min-width: 1050px) {
+    label {
+        width: (100%-2px)/4;
+    }
+}

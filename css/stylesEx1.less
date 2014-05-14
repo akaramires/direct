@@ -1,0 +1,68 @@
+@import "variables";
+@import "common";
+
+.container {
+    max-width: @content-width;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #428bca;
+    height: 53px;
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 2px 4px 20px #005377;
+        -moz-box-shadow: 2px 4px 20px #005377;
+        -webkit-box-shadow: 0 2px 11px #005377;
+    }
+    .container {
+        h3 {
+            margin: 0;
+            padding: 15px 0;
+            color: #ffffff;
+            float: left;
+        }
+    }
+    .menu-top {
+        float: right;
+        ul {
+            li {
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+section {
+    &.wrap {
+        padding-top: 30px;
+        &.scrolled {
+            padding-top: 83px;
+        }
+    }
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    height: 53px;
+    line-height: 53px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &.sticky {
+        .background-gradient-gray;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        &.hidden {
+            bottom: -53px;
+        }
+    }
+}
